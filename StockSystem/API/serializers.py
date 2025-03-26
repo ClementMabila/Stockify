@@ -10,15 +10,10 @@ class StockAlertSerializer(serializers.ModelSerializer):
         model = RestockRequest
         fields = ['request_date', 'product', 'sku', 'requested_quantity', 'status']
 
-
 class SalesEntrySerializer(serializers.ModelSerializer):
-    product = serializers.CharField(source='product.name')
-    sku = serializers.CharField(source='product.sku') 
-
     class Meta:
         model = Sale
-        fields = ['sale_date', 'product', 'sku', 'quantity_sold', 'sale_price', 'status']
-
+        fields = ['sale_date', 'product', 'customer', 'sku', 'quantity_sold', 'sale_price', 'status']
 
 class StockHistorySerializer(serializers.ModelSerializer):
     product = serializers.CharField(source='product.name')

@@ -591,3 +591,72 @@ select:focus {
   background-color: white;
   text-transform: uppercase;
 }
+
+.status-td {
+  text-align: start;
+}
+
+.modal-overlay {
+  margin-top: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 30%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  background-color: #333;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 10px;
+  font-size: 11px;
+}
+
+.modal-content input, .modal-content select {
+  width: 240px;
+  height: 27px;
+  margin-left: 45px;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #4444;
+  color: #444;
+  font-size: 9px;
+}
+
+.modal-actions {
+  margin-top: 15px;
+  text-align: right;
+}
+
+.modal-actions button {
+  margin-left: 10px;
+  padding: 8px 12px;
+}
+
+.modal-actions {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+}
+
+.modal-buttons {
+  background-color: white;
+  color: #4444;
+  font-size: 11px;
+  width: 60px;
+  height: 30px;
+  border: 1px solid #4444;
+  border-radius: 10px;
+}

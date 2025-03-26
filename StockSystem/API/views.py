@@ -70,18 +70,15 @@ class StockAlertViewSet(viewsets.ReadOnlyModelViewSet):
         queryset = RestockRequest.objects.filter(requested_quantity__lte=999999)
         return queryset
 
+from rest_framework import viewsets
 
-class SalesEntryViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Sale.objects.all().order_by('-sale_date')  
+class SalesEntryViewSet(viewsets.ModelViewSet):  # Change from ReadOnlyModelViewSet
+    queryset = Sale.objects.all().order_by('-sale_date')
     serializer_class = SalesEntrySerializer
-
-
-
+    
 class StockHistoryViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = StockHistory.objects.all().order_by('-transaction_date') 
     serializer_class = StockHistorySerializer
-
-
 
 class InventoryViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Product.objects.all()
